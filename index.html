@@ -9,10 +9,10 @@
     <style>
         .pixel{
             border: 1px solid white;
-            height: 15px;
-            width: 15px;
-            margin-right: 3px;
-            margin-bottom: 3px;
+    height: 10px;
+    width: 11px;
+    margin-right: 0.95px;
+    margin-bottom: 1.95px;
         }
         .pixel:hover{
             border-color: red;
@@ -20,11 +20,11 @@
         }
         .pixel_overlay{
             position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 8px;
+    top: 9px;
     display: flex;
-    width: 1000px;
     flex-flow: wrap;
+    width: 700px;
         }
         .row{
             margin: 0;
@@ -35,9 +35,9 @@
 </head>
 <body>
     <div class='pixel_overlay' ></div>
-    <img src="lemao.png">
+    <img src="snoo.png">
     <script>
-        for (i=1;i<=65;i++){
+        for (i=1;i<=50;i++){
             const currentRow=document.createElement("div");
             currentRow.className='row';
             for (j=1;j<=50;j++){
