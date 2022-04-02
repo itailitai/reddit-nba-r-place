@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css">
+    <style>
+        .pixel{
+            border: 1px solid white;
+            height: 15px;
+            width: 15px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+        }
+        .pixel:hover{
+            border-color: red;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .pixel_overlay{
+            position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    width: 1000px;
+    flex-flow: wrap;
+        }
+        .row{
+            margin: 0;
+    display: flex;
+    flex-flow: row;
+        }
+    </style>
+</head>
+<body>
+    <div class='pixel_overlay' ></div>
+    <img src="lemao.png">
+    <script>
+        for (i=1;i<=65;i++){
+            const currentRow=document.createElement("div");
+            currentRow.className='row';
+            for (j=1;j<=50;j++){
+            const currentDiv = document.createElement("div");
+            currentDiv.className= 'pixel';
+            currentDiv.setAttribute("aria-label",(1778+j)+","+(235+i));
+            currentDiv.setAttribute("data-microtip-position","bottom");
+            currentDiv.setAttribute("role","tooltip");
+           currentRow.append(currentDiv);
+        }
+        document.body.querySelector(".pixel_overlay").append(currentRow);
+        }
+        
+        
+        </script>
+        
+</body>
+
+</html>
