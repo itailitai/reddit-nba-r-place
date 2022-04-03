@@ -9,9 +9,9 @@
     <style>
         .pixel{
             border: 1px solid white;
-    height: 10px;
-    width: 11px;
-    margin-right: 0.95px;
+    height: 27px;
+    width: 27px;
+    margin-right: 2px;
     margin-bottom: 1.95px;
         }
         .pixel:hover{
@@ -24,7 +24,7 @@
     top: 9px;
     display: flex;
     flex-flow: wrap;
-    width: 700px;
+    
         }
         .row{
             margin: 0;
@@ -35,15 +35,15 @@
 </head>
 <body>
     <div class='pixel_overlay' ></div>
-    <img src="snoo.png">
+    <img src="NBA75.png">
     <script>
-        for (i=1;i<=50;i++){
+        for (i=1;i<=35;i++){
             const currentRow=document.createElement("div");
             currentRow.className='row';
-            for (j=1;j<=50;j++){
+            for (j=1;j<=35;j++){
             const currentDiv = document.createElement("div");
             currentDiv.className= 'pixel';
-            currentDiv.setAttribute("aria-label",(1778+j)+","+(235+i));
+            currentDiv.setAttribute("aria-label",(725+j)+","+(1522+i));
             currentDiv.setAttribute("data-microtip-position","bottom");
             currentDiv.setAttribute("role","tooltip");
            currentRow.append(currentDiv);
